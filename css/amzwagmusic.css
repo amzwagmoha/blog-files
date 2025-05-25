@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'dubai';
+  src: url('../css/dubai.woff2') format('woff2'),
+       url('../css/dubai.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'tifinagh-title';
+  src: url('../fonts/tifinagh-title.woff2') format('woff2'),
+       url('../fonts/tifinagh-title.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tifinagh-text';
+  src: url('../fonts/tifinagh-text.woff2') format('woff2'),
+       url('../fonts/tifinagh-text.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+h1 {
+  font-family: 'tifinagh-title', Arial, Helvetica, sans-serif;
+}
+
+h2, p, ul {
+  font-family: 'tifinagh-text', Arial, Helvetica, sans-serif;
+}
