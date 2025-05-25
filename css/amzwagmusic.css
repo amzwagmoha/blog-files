@@ -24,12 +24,49 @@
 }
 
 
-h1 {
+.tifinagh-title {
   font-family: 'tifinagh-title', Arial, Helvetica, sans-serif;
-  background: green;
+  font-weight: normal;
+
 }
 
-h2, p, ul {
+.tifinagh-text {
   font-family: 'tifinagh-text', Arial, Helvetica, sans-serif;
-  background: red;
 }
+
+.post-body ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1em 0;
+}
+
+.post-body ul li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.post-body .btn {
+  display: inline-block;
+  background-color: #F4A900;
+  color: white;
+  padding: 0.5em 1.2em;
+  margin: 0.5em 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.post-body .btn:hover {
+  background-color: #d18c00;
+  color: #fff;
+}
+
+
