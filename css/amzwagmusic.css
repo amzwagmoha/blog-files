@@ -90,10 +90,6 @@ a:hover::after {
   padding: 10px;
 }
 
-.custom-navbar a.active {
-  color:  #F4A900;
-}
-
 .custom-navbar a.active::after {
   transform: scaleX(1);
 }
