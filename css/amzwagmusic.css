@@ -43,7 +43,7 @@ a {
 }
 
 a::after {
-  content: &#39;&#39;;
+  content: '';
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -82,7 +82,7 @@ a:hover::after {
 }
 
 .custom-navbar li::before {
-  content: &#39;\2022&#39;;
+  content: '•';
   color: #f0a500;
   font-size: 1em;
 }
