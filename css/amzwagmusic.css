@@ -31,6 +31,28 @@
   font-family: 'tifinagh-text', Arial, Helvetica, sans-serif;
 }
 
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #F4A900;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
 .header-widget {
   text-align: center;
 }
@@ -69,8 +91,11 @@
 }
 
 .custom-navbar a.active {
-  border-bottom: 3px solid #F4A900;
-  padding-bottom: 12px;
+  color:  #F4A900;
+}
+
+.custom-navbar a.active::after {
+  transform: scaleX(1);
 }
 
 .welcome-message {
@@ -136,28 +161,6 @@ main ul li {
   display: block;
   margin: 1em auto;
   border-radius: 8px;
-}
-
-a {
-  position: relative;
-  text-decoration: none;
-}
-
-a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: #F4A900;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  transform-origin: left;
-}
-
-a:hover::after {
-  transform: scaleX(1);
 }
 
 /* Responsive */
