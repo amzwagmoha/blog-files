@@ -67,7 +67,12 @@
 .custom-navbar a {
   color: white;
   text-decoration: none;
-  padding: 10px ;
+  padding: 10px;
+}
+
+.custom-navbar a.active {
+  border-bottom: 3px solid #F4A900;
+  padding-bottom: 12px;
 }
 
 .welcome-message {
