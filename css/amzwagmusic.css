@@ -4,7 +4,6 @@
        url('../css/dubai.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
@@ -22,7 +21,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 
 .tifinagh-title {
   font-family: 'tifinagh-title', Arial, Helvetica, sans-serif;
@@ -82,7 +80,6 @@
   line-height:30px;
   margin-bottom: 2rem;
   font: normal 400 14px Montserrat, sans-serif;
-
 }
 
 .welcome-message h2 {
