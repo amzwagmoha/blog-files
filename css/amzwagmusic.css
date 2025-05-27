@@ -107,11 +107,13 @@ a:hover::after {
 
 .welcome-message {
   display: none;
-  line-height:20px;
 }
 
 .homepage-view .welcome-message {
   display: block;
+  line-height:20px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
  main ul {
