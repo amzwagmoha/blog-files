@@ -31,7 +31,7 @@
   font-family: 'tifinagh-text', Arial, Helvetica, sans-serif;
 }
 
-/* Elements généraux */
+/* general Elements  */
 ul {
   list-style: none;
 }
@@ -63,7 +63,7 @@ a:hover::after {
   text-align: center;
 }
 
-/* Menu horizontal */
+/* horizontal navbar */
 .custom-navbar {
   padding: 10px 0;
   font: normal 400 14px Montserrat, sans-serif;
@@ -160,6 +160,12 @@ main ul li {
   gap: 5px;
 }
 
+.label-list li:last-child {
+  border-bottom: none;
+  font-family: 'Montserrat', sans-serif;
+  gap: 5px;
+}
+
 .label-list a i {
   margin-right: 8px;
   color: #fff;
@@ -187,6 +193,7 @@ h3 i {
   text-transform: capitalize;
 }
 
+/* side navbar */
 .side-navbar ul {
   margin: 0;
   padding: 0;
