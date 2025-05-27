@@ -22,6 +22,7 @@
   font-style: normal;
 }
 
+
 .tifinagh-title {
   font-family: 'tifinagh-title', Arial, Helvetica, sans-serif;
   font-weight: normal;
@@ -31,9 +32,11 @@
   font-family: 'tifinagh-text', Arial, Helvetica, sans-serif;
 }
 
+/* Elements généraux */
 a {
   position: relative;
   text-decoration: none;
+  color: #F4A900;
 }
 
 a::after {
@@ -57,14 +60,13 @@ a:hover::after {
   text-align: center;
 }
 
-/* Barre principale */
+/* Menu horizontal */
 .custom-navbar {
   background: #2d2d2d;
   font: normal 400 14px Montserrat, sans-serif;
   padding: 10px 0;
 }
 
-/* Menu horizontal */
 .custom-navbar ul {
   list-style: none;
   display: flex;
@@ -87,6 +89,7 @@ a:hover::after {
 .custom-navbar a {
   color: white;
   text-decoration: none;
+  text-transform: uppercase;
   padding: 10px;
 }
 
@@ -94,22 +97,17 @@ a:hover::after {
   transform: scaleX(1);
 }
 
+.welcome-box {
+  background: #2d2d2d;
+  border-left: 4px solid #F4A900;
+  padding: 20px;
+  margin-bottom: 30px;
+  color: white;
+}
+
 .welcome-message {
   display: none;
-  color: #fff;
-  font-size: 1rem;
-  line-height:30px;
-  margin-bottom: 2rem;
-  font: normal 400 14px Montserrat, sans-serif;
-}
-
-.welcome-message h2 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.welcome-message p {
-  margin: 0.5rem 0;
+  line-height:20px;
 }
 
 .homepage-view .welcome-message {
@@ -164,4 +162,43 @@ main ul li {
   .custom-navbar {
     display: none;
   }
+}
+
+/* Style des Pages */
+  .label-list {
+    padding: 0;
+  }
+
+  .label-list li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .label-list a i {
+    margin-right: 8px;
+    color: #fff;
+  }
+
+  .label-list span.count {
+    background: #444;
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.8em;
+  }
+
+  .label-list .poet-line {
+    color: gray;
+    font-size: 0.8em;
+  }
+
+h3 i {
+  color: #F4A900;
+}
+  .capitalize{
+  text-transform: capitalize;
 }
