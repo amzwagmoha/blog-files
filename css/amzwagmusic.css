@@ -38,26 +38,10 @@ ul {
 
 a {
   position: relative;
-  color: #f4a900;
   text-decoration: none;
+  color: red;
 }
 
-a::after {
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #f4a900;
-  content: '';
-  transition: transform .3s ease;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-a:hover::after {
-  transform: scaleX(1);
-}
 
 .header-widget {
   text-align: center;
@@ -91,6 +75,20 @@ a:hover::after {
   padding: 10px;
   color: white;
   text-transform: uppercase;
+}
+
+.custom-navbar a::after,
+.side-navbar a::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f4a900;
+  content: '';
+  transition: transform .3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 .custom-navbar a.active::after {
