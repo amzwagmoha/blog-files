@@ -14,7 +14,6 @@
           return;
         }
 
-        // Trier les articles par titre (alphabétique)
         entries.sort((a, b) => {
           const titleA = a.title.$t.toLowerCase();
           const titleB = b.title.$t.toLowerCase();
