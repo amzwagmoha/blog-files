@@ -143,13 +143,17 @@ main ul li {
   box-shadow: 0 0 8px #fff;
 }
 
-.poet-line {
-  color: gray;
-  font-size: 0.85em;
-}
-
 h3 i {
   color: #f4a900;
+}
+
+.poet-name {
+  color: gray;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 30px 0 10px 0;
+  ext-align: center ;
 }
 
   .card-grid {
@@ -208,6 +212,10 @@ h3 i {
     height: auto;
     border-radius: 8px;
   }
+
+.poet-name {
+  text-align: left ;
+}
 
   .card-grid {
     gap: 10px;

@@ -1,10 +1,12 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
   const containers = document.querySelectorAll('[data-label]');
-  const labelsWithPoetLine = ['paroles', 'comptines', 'ahwach', 'rways', 'tagrouppit', 'taznzart'];
+  const labelsWithPoetLine = ['paroles', 'ahwach', 'rways', 'tagrouppit', 'taznzart'];
 
   containers.forEach(container => {
     const label = container.dataset.label;
     const icon = container.dataset.icon || '';
+    const isGrouped = labelsWithPoetLine.includes(label);
+
     fetch('https://amzwagblog.blogspot.com/feeds/posts/default/-/' + label + '?alt=json')
       .then(response => response.json())
       .then(data => {
@@ -14,33 +16,64 @@
           return;
         }
 
-        entries.sort((a, b) => {
-          const titleA = a.title.$t.toLowerCase();
-          const titleB = b.title.$t.toLowerCase();
-          return titleA.localeCompare(titleB);
-        });
+        let html = '';
 
-        const html = entries.map(entry => {
-          const title = entry.title.$t;
-          const link = entry.link.find(l => l.rel === 'alternate').href;
+        if (isGrouped) {
+          // Grouper par poète
+          const groupedByPoet = {};
 
-          let poetSpan = '';
-          if (labelsWithPoetLine.includes(label) && entry.content && entry.content.$t) {
-            const content = entry.content.$t;
-            const match = content.match(/<h4[^>]*>(.*?)<\/h4>/i);
-            if (match && match[1]) {
-              const poet = match[1].trim();
-              poetSpan = `<span class="poet-line">${poet}</span>`;
+          entries.forEach(entry => {
+            const title = entry.title.$t;
+            const link = entry.link.find(l => l.rel === 'alternate').href;
+            let poet = 'Inconnu';
+
+            if (entry.content && entry.content.$t) {
+              const match = entry.content.$t.match(/<h4[^>]*>(.*?)<\/h4>/i);
+              if (match && match[1]) {
+                poet = match[1].trim();
+              }
             }
-          }
 
-          return `
-            <a class="card-link" href="${link}" rel="noopener">
-              <i class="${icon}"></i>
-              <div class="card-title">${title}${poetSpan}</div>
-            </a>
-          `;
-        }).join('');
+            if (!groupedByPoet[poet]) {
+              groupedByPoet[poet] = [];
+            }
+
+            groupedByPoet[poet].push({ title, link });
+          });
+
+          const sortedPoets = Object.keys(groupedByPoet).sort((a, b) => a.localeCompare(b));
+
+          sortedPoets.forEach(poet => {
+            const count = groupedByPoet[poet].length;
+            html += `<h4 class="poet-name"><i class="bi bi-person-fill"></i> ${poet} (${count})</h4>`;
+            html += `<div class="card-grid">`;
+            groupedByPoet[poet].forEach(entry => {
+              html += `
+                <a class="card-link" href="${entry.link}" rel="noopener">
+                  <i class="${icon}"></i>
+                  <div class="card-title">${entry.title}</div>
+                </a>
+              `;
+            });
+            html += `</div>`;
+          });
+
+        } else {
+          // Affichage simple dans le conteneur d'origine
+          entries.sort((a, b) => a.title.$t.localeCompare(b.title.$t));
+
+          html = '<div class="card-grid">' + entries.map(entry => {
+            const title = entry.title.$t;
+            const link = entry.link.find(l => l.rel === 'alternate').href;
+
+            return `
+              <a class="card-link" href="${link}" rel="noopener">
+                <i class="${icon}"></i>
+                <div class="card-title">${title}</div>
+              </a>
+            `;
+          }).join('') + '</div>';
+        }
 
         container.innerHTML = html;
       })
