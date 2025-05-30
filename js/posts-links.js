@@ -1,6 +1,6 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
   const containers = document.querySelectorAll('[data-label]');
-  const labelsWithPoetLine = ['paroles', 'ahwach', 'rways', 'tagrouppit', 'taznzart'];
+  const labelsWithPoetLine = ['paroles', 'ahwach', 'rways', 'tagrouppit', 'taznzart', 'comptines'];
 
   containers.forEach(container => {
     const label = container.dataset.label;
