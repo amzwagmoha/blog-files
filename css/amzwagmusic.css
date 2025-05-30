@@ -112,10 +112,6 @@ main ul li {
 }
 
 /* Style des Pages */
-.welcome-box {
-  padding: 10px;
-}
-
 .welcome-message {
   display: none;
 }
@@ -201,10 +197,23 @@ h3 i {
   }
 
 @media (max-width: 768px) {
+  .custom-navbar {
+    display: none;
+  }
+
+  .post-body img {
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
   .card-grid {
     gap: 10px;
     margin: auto;
   }
+
   .card-link {
     flex-direction: row;
     padding: 15px;
@@ -222,22 +231,6 @@ h3 i {
     .labels .card-title {
     justify-content:  space-between;
   }
- }
 
-
-/* Responsive */
-@media (max-width: 768px) {
-  .custom-navbar {
-    display: none;
-  }
-
-  /* Images dans les articles/pages */
-  .post-body img {
-    display: block;
-    margin: 1em auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
 }
 
