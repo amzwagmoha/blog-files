@@ -5,7 +5,6 @@
   containers.forEach(container => {
     const label = container.dataset.label;
     const icon = container.dataset.icon || '';
-    const isGrouped = labelsWithPoetLine.includes(label);
 
     fetch('https://amzwagblog.blogspot.com/feeds/posts/default/-/' + label + '?alt=json')
       .then(response => response.json())
@@ -16,17 +15,17 @@
           return;
         }
 
-        let html = '';
+        let html = `<h3 class="total-count">Total : ${entries.length} articles</h3>`;
 
-        if (isGrouped) {
+        if (labelsWithPoetLine.includes(label)) {
           // Grouper par poète
           const groupedByPoet = {};
 
           entries.forEach(entry => {
             const title = entry.title.$t;
             const link = entry.link.find(l => l.rel === 'alternate').href;
-            let poet = 'Inconnu';
 
+            let poet = 'Inconnu';
             if (entry.content && entry.content.$t) {
               const match = entry.content.$t.match(/<h4[^>]*>(.*?)<\/h4>/i);
               if (match && match[1]) {
@@ -37,15 +36,13 @@
             if (!groupedByPoet[poet]) {
               groupedByPoet[poet] = [];
             }
-
             groupedByPoet[poet].push({ title, link });
           });
 
           const sortedPoets = Object.keys(groupedByPoet).sort((a, b) => a.localeCompare(b));
 
           sortedPoets.forEach(poet => {
-            const count = groupedByPoet[poet].length;
-            html += `<h4 class="poet-name"><i class="bi bi-person-fill"></i> ${poet} (${count})</h4>`;
+            html += `<h3 class="poet-name">${poet} <span class="poet-count">(${groupedByPoet[poet].length})</span></h3>`;
             html += `<div class="card-grid">`;
             groupedByPoet[poet].forEach(entry => {
               html += `
@@ -59,20 +56,20 @@
           });
 
         } else {
-          // Affichage simple dans le conteneur d'origine
-          entries.sort((a, b) => a.title.$t.localeCompare(b.title.$t));
-
-          html = '<div class="card-grid">' + entries.map(entry => {
+          // Affichage simple sans poète
+          html += `<div class="card-grid">`;
+          entries.forEach(entry => {
             const title = entry.title.$t;
             const link = entry.link.find(l => l.rel === 'alternate').href;
 
-            return `
+            html += `
               <a class="card-link" href="${link}" rel="noopener">
                 <i class="${icon}"></i>
                 <div class="card-title">${title}</div>
               </a>
             `;
-          }).join('') + '</div>';
+          });
+          html += `</div>`;
         }
 
         container.innerHTML = html;
