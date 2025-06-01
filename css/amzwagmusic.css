@@ -34,27 +34,28 @@
 .header-widget {
   text-align: center;
 }
+
 .custom-navbar li::before {
-  content: '\2022';
   color: #f0a500;
+  content: '\2022';
   font-size: 1rem;
 }
 
 em {
-  font-family: Lora, serif;
   font-style: italic;
+  font-family: Lora, serif;
 }
 
 .hamburger-menu-container {
-	display: none;
+  display: none;
 }
-
 
 @media (max-width: 768px) {
-.hamburger-menu-container {
-		display: block;
-	}
+  .hamburger-menu-container {
+    display: block;
+  }
 }
+
 /* general Elements  */
 ul {
   list-style: none;
@@ -69,29 +70,29 @@ a {
 input, textarea {
   position: relative;
   padding: 10px;
+  outline: none;
   border: 1px solid #666;
   border-radius: 4px;
+  border-radius: 12px;
   background: #1e1e1e;
+  box-shadow: 0 0 5px rgba(255, 255, 255, .1);
   color: #fff;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
-  border-radius: 12px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, .1);
   transition-duration: .3s ease;
-  outline: none;
 }
 
 input:focus, textarea:focus {
-  box-shadow: 0 0 5px #f4A900;
-  border: 1px solid #f4A900;
+  border: 1px solid #f4a900;
+  box-shadow: 0 0 5px #f4a900;
 }
 
 .search input {
   border: none;
   border-radius: 0;
   background: transparent;
+  box-shadow: 0 0 0 transparent;
   color: #fff;
-  box-shadow: 0 0 0px transparent;
 }
 
 /* horizontal navbar */
@@ -156,10 +157,10 @@ input:focus, textarea:focus {
 }
 
 .side-navbar li {
+  margin: 0 !important;
+  padding: 0;
   border-bottom: 1px solid #444;
   transition-duration: .3s;
-  padding: 0;
-  margin: 0 !important;
 }
 
 .side-navbar li:last-child {
@@ -171,15 +172,15 @@ input:focus, textarea:focus {
 }
 
 .side-navbar a {
-  color: #fff;
-  padding: 15px 0;
   display: block;
+  padding: 15px 0;
+  color: #fff;
   transition-duration: .3s;
 }
 
 .side-navbar i {
-  color: #f4a900;
   margin-right: 8px;
+  color: #f4a900;
 }
 
 /* Style des Pages */
@@ -202,7 +203,6 @@ main ul li {
   font-size: 1rem;
   line-height: 1.6;
 }
-
 
 .count {
   display: inline-block;
@@ -285,6 +285,73 @@ h3 i {
   justify-content: center;
 }
 
+/* Personnaliser mon footer */
+
+#Attribution1 {
+  display: none !important;
+}
+
+.custom-footer {
+  padding: 20px 0;
+  border-top: 1px solid #444;
+  color: #ccc;
+  font-size: .9rem;
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1100px;
+  gap: 20px;
+}
+
+.footer-brand {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.footer-brand span {
+  color: #f4a900;
+}
+
+.footer-links, .footer-social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a, .footer-social a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+  color: #f4a900;
+}
+
+.footer-social i {
+  font-size: 1.2rem;
+}
+
+a.facebook:hover {
+  color: #1877f2;
+}
+
+a.instagram:hover {
+  color: #e4405f;
+}
+
+a.youtube:hover {
+  color: #f00;
+}
+
 @media (max-width: 768px) {
   .custom-navbar {
     display: none;
@@ -325,5 +392,19 @@ h3 i {
 
   .labels .card-title {
     justify-content: space-between;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .footer-wrapper, .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links {
+    padding: 10px;
+    border-bottom: 1px solid #444;
   }
 }
