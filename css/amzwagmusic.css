@@ -55,7 +55,17 @@ input, textarea {
   color: #fff;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, .1);
+  transition-duration: .3s ease;
+  outline: none;
 }
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 5px #f4A900;
+  border: 1px solid #f4A900;
+}
+
 
 /* horizontal navbar */
 .custom-navbar {
