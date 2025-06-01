@@ -46,6 +46,17 @@ a {
   text-decoration: none;
 }
 
+input, textarea {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background: #1e1e1e;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
 /* horizontal navbar */
 .custom-navbar {
   padding: 10px 0;
@@ -78,7 +89,6 @@ a {
 
 .custom-navbar a:hover {
   color: #fff;
-
 }
 
 .custom-navbar a::after {
@@ -125,85 +135,84 @@ main ul li {
 
 .count {
   display: inline-block;
-  min-width: 24px;
   padding: 4px 8px;
+  min-width: 24px;
   border-radius: 12px;
   background: #2c2c2c;
+  box-shadow: 0 0 5px rgba(255, 255, 255, .1);
   color: #f0f0f0;
-  font-size: 0.85em;
   text-align: center;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
-  transition: background-color 0.3s ease;
+  font-weight: normal;
+  font-size: .85em;
+  transition: background-color .3s ease;
   user-select: none;
 }
 
 .count:hover {
   background-color: #555;
-  color: #fff;
   box-shadow: 0 0 8px #fff;
+  color: #fff;
+}
+
+.poet-name {
+  margin: 30px 0 10px 0;
+  color: #f4a900;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.poet-count {
+  color: gray;
 }
 
 h3 i {
   color: #f4a900;
 }
 
-.poet-name {
+.card-grid {
+  display: grid;
+  margin: auto;
+  max-width: 1000px;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 10px;
+  background: #2d2d2d;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background .3s, transform .2s;
+  gap: 20px;
+}
+
+.card-link:hover {
+  background: #1e1e1e;
+  transform: translateY(-5px);
+}
+
+.card-link i {
   color: #f4a900;
+  font-size: 1.8rem;
+}
+
+.card-title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
   font-size: 1rem;
-  font-weight: normal;
-  text-transform: capitalize;
-  margin: 30px 0 10px 0;
-}
-.total-count {
-  color: gray;
-  font-weight: normal;
-  font-size: 0.9rem;
+  gap: 10px;
 }
 
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  .card-link {
-    background: #2d2d2d;
-    padding: 50px 10px;
-    color: #fff;
-    transition: background 0.3s, transform 0.2s;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    text-transform: uppercase;
-
-  }
-
-  .card-link:hover {
-    background: #1e1e1e;
-    transform: translateY(-5px);
-  }
-
-  .card-link i {
-    font-size: 1.8rem;
-    color: #f4a900;
-  }
-
-  .card-title {
-    font-size: 1rem;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-
-  .labels .card-title {
-    flex-direction: row;
-    justify-content: center;
-  }
+.labels .card-title {
+  flex-direction: row;
+  justify-content: center;
+}
 
 @media (max-width: 768px) {
   .custom-navbar {
@@ -218,32 +227,32 @@ h3 i {
     border-radius: 8px;
   }
 
-.poet-name {
-  text-align: left ;
-}
+  .poet-name {
+    text-align: left ;
+  }
 
   .card-grid {
-    gap: 10px;
     margin: auto;
+    gap: 10px;
   }
 
   .card-link {
+    align-items: flex-start;
     flex-direction: row;
     padding: 15px;
     gap: 5px;
-    align-items:  flex-start;
-    }
+  }
 
   .card-link i {
-    font-size: 1rem;
     color: #f4a900;
+    font-size: 1rem;
   }
+
   .card-title {
     text-align: left;
   }
-    .labels .card-title {
-    justify-content:  space-between;
+
+  .labels .card-title {
+    justify-content: space-between;
   }
-
 }
-

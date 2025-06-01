@@ -2,21 +2,28 @@
   const containers = document.querySelectorAll('[data-label]');
   const labelsWithPoetLine = ['paroles', 'ahwach', 'rways', 'tagrouppit', 'taznzart', 'comptines'];
 
+
   containers.forEach(container => {
     const label = container.dataset.label;
     const icon = container.dataset.icon || '';
+    const totalCount = document.getElementById('count-' + label);
 
     fetch('https://amzwagblog.blogspot.com/feeds/posts/default/-/' + label + '?alt=json')
       .then(response => response.json())
       .then(data => {
         const entries = data.feed.entry || [];
+
         if (entries.length === 0) {
           container.innerHTML = '<p>Aucun article trouvé.</p>';
           return;
         }
 
-        let html = `<h3 class="total-count">Total : ${entries.length} articles</h3>`;
+        if (totalCount) {
+          totalCount.textContent = entries.length;
+        }
 
+        let html = '';
+        
         if (labelsWithPoetLine.includes(label)) {
           // Grouper par poète
           const groupedByPoet = {};
@@ -42,7 +49,7 @@
           const sortedPoets = Object.keys(groupedByPoet).sort((a, b) => a.localeCompare(b));
 
           sortedPoets.forEach(poet => {
-            html += `<h3 class="poet-name">${poet} <span class="poet-count">(${groupedByPoet[poet].length})</span></h3>`;
+            html += `<h3 class="poet-name">${poet} <span class="poet-count">${groupedByPoet[poet].length}</span></h3>`;
             html += `<div class="card-grid">`;
             groupedByPoet[poet].forEach(entry => {
               html += `
