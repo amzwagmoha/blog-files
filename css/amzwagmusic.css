@@ -34,7 +34,27 @@
 .header-widget {
   text-align: center;
 }
+.custom-navbar li::before {
+  content: '\2022';
+  color: #f0a500;
+  font-size: 1rem;
+}
 
+em {
+  font-family: Lora, serif;
+  font-style: italic;
+}
+
+.hamburger-menu-container {
+	display: none;
+}
+
+
+@media (max-width: 768px) {
+.hamburger-menu-container {
+		display: block;
+	}
+}
 /* general Elements  */
 ul {
   list-style: none;
@@ -64,6 +84,14 @@ input, textarea {
 input:focus, textarea:focus {
   box-shadow: 0 0 5px #f4A900;
   border: 1px solid #f4A900;
+}
+
+.search input {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  box-shadow: 0 0 0px transparent;
 }
 
 /* horizontal navbar */
@@ -121,13 +149,37 @@ input:focus, textarea:focus {
   transform: scaleX(1);
 }
 
-main ul {
-  padding-left: 0;
+/* side navbar */
+.side-navbar {
+  margin: 0;
+  padding: 0;
 }
 
-main ul li {
-  font-size: 1rem;
-  line-height: 1.6;
+.side-navbar li {
+  border-bottom: 1px solid #444;
+  transition-duration: .3s;
+  padding: 0;
+  margin: 0 !important;
+}
+
+.side-navbar li:last-child {
+  border-bottom: none;
+}
+
+.side-navbar li:hover {
+  border-bottom: 1px solid #f4a900;
+}
+
+.side-navbar a {
+  color: #fff;
+  padding: 15px 0;
+  display: block;
+  transition-duration: .3s;
+}
+
+.side-navbar i {
+  color: #f4a900;
+  margin-right: 8px;
 }
 
 /* Style des Pages */
@@ -141,6 +193,16 @@ main ul li {
   font-family: 'Montserrat', sans-serif;
   line-height: 20px;
 }
+
+main ul {
+  padding-left: 0;
+}
+
+main ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 
 .count {
   display: inline-block;
