@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
   font-weight: normal;
   font-style: normal;
   font-family: 'dubai';
@@ -31,12 +31,27 @@
   font-family: 'tifinagh-text', Arial, Helvetica, sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .header-widget {
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
   text-align: center;
 }
 
 .custom-navbar li::before {
-  color: #f0a500;
+  background-color: #fff;
+  color: #3aafa9;
   content: '\2022';
   font-size: 1rem;
 }
@@ -57,17 +72,16 @@ em {
   margin-top: 10px;
   padding: 10px 18px;
   border-radius: 5px;
-  background-color: #f4a900;
+  background-color: #3aafa9;
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
   font-size: .95rem;
   transition: background-color .3s;
   gap: 6px;
 }
 
 .button:hover {
-  background-color: #d98c00;
+  background-color: #2b7a78;
 }
 
 ul {
@@ -76,41 +90,46 @@ ul {
 
 a {
   position: relative;
-  color: #f4a900;
+  color: #3aafa9;
   text-decoration: none;
+}
+
+a:hover {
+  color: #2b7a78;
 }
 
 input, textarea {
   position: relative;
   padding: 10px;
   outline: none;
-  border: 1px solid #666;
-  border-radius: 4px;
+  border: 1px solid #e0e0e0;
   border-radius: 12px;
-  background: #1e1e1e;
-  box-shadow: 0 0 5px rgba(255, 255, 255, .1);
-  color: #fff;
+  background: #fff; /* fond clair */
+  box-shadow: 0 0 5px rgba(58, 175, 169, .3);
+  color: #333; /* texte sombre */
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
   transition-duration: .3s ease;
 }
 
 input:focus, textarea:focus {
-  border: 1px solid #f4a900;
-  box-shadow: 0 0 5px #f4a900;
+  border: 1px solid #3aafa9;
+  box-shadow: 0 0 8px #3aafa9;
 }
 
 .search input {
   border: none;
   border-radius: 0;
   background: transparent;
-  box-shadow: 0 0 0 transparent;
-  color: #fff;
+  box-shadow: none;
+  color: #333;
 }
 
 /* horizontal navbar */
 .custom-navbar {
   padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
   font: normal 400 14px Montserrat, sans-serif;
 }
 
@@ -134,12 +153,13 @@ input:focus, textarea:focus {
 
 .custom-navbar a {
   padding: 10px;
-  color: #f0f0f0;
+  color: #333;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .custom-navbar a:hover {
-  color: #fff;
+  color: #3aafa9;
 }
 
 .custom-navbar a::after {
@@ -148,7 +168,7 @@ input:focus, textarea:focus {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #f4a900;
+  background-color: #3aafa9;
   content: '';
   transition: transform .3s ease;
   transform: scaleX(0);
@@ -167,12 +187,13 @@ input:focus, textarea:focus {
 .side-navbar {
   margin: 0;
   padding: 0;
+  background-color: #f0f0f0;
 }
 
 .side-navbar li {
   margin: 0 !important;
   padding: 0;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #e0e0e0;
   transition-duration: .3s;
 }
 
@@ -181,19 +202,19 @@ input:focus, textarea:focus {
 }
 
 .side-navbar li:hover {
-  border-bottom: 1px solid #f4a900;
+  border-bottom: 1px solid #3aafa9;
 }
 
 .side-navbar a {
   display: block;
   padding: 15px 0;
-  color: #fff;
+  color: #333;
   transition-duration: .3s;
 }
 
 .side-navbar i {
   margin-right: 8px;
-  color: #f4a900;
+  color: #3aafa9;
 }
 
 /* Style des Pages */
@@ -203,6 +224,7 @@ input:focus, textarea:focus {
 
 .homepage-view .welcome-message {
   display: block;
+  color: #333;
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   line-height: 20px;
@@ -213,6 +235,7 @@ main ul {
 }
 
 main ul li {
+  color: #444;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -222,9 +245,8 @@ main ul li {
   padding: 4px 8px;
   min-width: 24px;
   border-radius: 12px;
-  background: #2c2c2c;
-  box-shadow: 0 0 5px rgba(255, 255, 255, .1);
-  color: #f0f0f0;
+  background: #e0f0ef;
+  color: #3aafa9;
   text-align: center;
   font-weight: normal;
   font-size: .85em;
@@ -232,26 +254,31 @@ main ul li {
   user-select: none;
 }
 
-.count:hover {
-  background-color: #555;
-  box-shadow: 0 0 8px #fff;
+h3 .count {
+  background: none;
+  color: #3aafa9;
+}
+
+.card-link:hover .count {
+  background-color: #3aafa9;
   color: #fff;
 }
 
 .poet-name {
   margin: 30px 0 10px 0;
-  color: #f4a900;
+  color: #3aafa9;
   text-transform: capitalize;
   font-weight: normal;
   font-size: 1rem;
 }
 
 .poet-count {
-  color: gray;
+  color: #777;
+  font-size: .85em;
 }
 
 h3 i {
-  color: #f4a900;
+  color: #3aafa9;
 }
 
 .card-grid {
@@ -267,20 +294,24 @@ h3 i {
   align-items: center;
   flex-direction: column;
   padding: 50px 10px;
-  background: #2d2d2d;
-  color: #fff;
-  text-transform: uppercase;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgb(0 0 0 / .05);
+  color: #333;
+  text-transform: capitalize;
   transition: background .3s, transform .2s;
   gap: 20px;
 }
 
 .card-link:hover {
-  background: #1e1e1e;
+  background: #e6f2f1;
+  box-shadow: 0 4px 12px rgb(0 0 0 / .1);
   transform: translateY(-5px);
 }
 
 .card-link i {
-  color: #f4a900;
+  color: #3aafa9;
   font-size: 1.8rem;
 }
 
@@ -288,6 +319,7 @@ h3 i {
   display: flex;
   flex-direction: column;
   width: 100%;
+  color: #333;
   text-align: center;
   font-size: 1rem;
   gap: 10px;
@@ -306,8 +338,9 @@ h3 i {
 
 .custom-footer {
   padding: 20px 0;
-  border-top: 1px solid #444;
-  color: #ccc;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+  color: #555;
   font-size: .9rem;
 }
 
@@ -328,7 +361,7 @@ h3 i {
 }
 
 .footer-brand span {
-  color: #f4a900;
+  color: #3aafa9;
 }
 
 .footer-links, .footer-social {
@@ -340,13 +373,13 @@ h3 i {
 }
 
 .footer-links a, .footer-social a {
-  color: #ccc;
+  color: #666;
   text-decoration: none;
   transition: color .3s ease;
 }
 
 .footer-links a:hover, .footer-social a:hover {
-  color: #f4a900;
+  color: #3aafa9;
 }
 
 .footer-social i {
@@ -363,6 +396,118 @@ a.instagram:hover {
 
 a.youtube:hover {
   color: #f00;
+}
+
+/* Page de recherche */
+#custom-search {
+  position: relative;
+  display: flex;
+  margin: 10px auto;
+  max-width: 400px;
+}
+
+#search-input {
+  flex-grow: 1;
+  padding: 10px 40px 10px 10px;
+  width: 100%;
+}
+
+#custom-search button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  display: none;
+  padding: 6px 10px;
+  border: none;
+  background-color: transparent;
+  color: #3aafa9;
+  font-size: 14px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+#search-results div {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background .3s, transform .2s;
+}
+
+#search-results div:hover {
+  background: #e6f2f1;
+  transform: translateY(-5px);
+}
+
+#search-results h4 {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+#search-results p {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Contact */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 20px;
+  max-width: 800px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  width: 40%;
+  border: none;
+  border-radius: 4px;
+  background-color: #25d366;
+  color: white;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.contact-form button:hover {
+  background-color: #1ebe5d;
+}
+
+/* Mentions legales */
+.legal-head ul {
+  line-height: 1.7;
+}
+
+.legal-head a:hover, .legal-section a:hover {
+  text-decoration: underline;
+}
+
+.legal-section {
+  margin-top: 20px;
+  padding: 10px;
+  background: #e6f2f1;
+  line-height: 1.7;
+}
+
+.legal-section h3 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  gap: 10px;
+}
+
+.legal-section h3 i {
+  font-size: 1.8rem;
 }
 
 @media (max-width: 768px) {
@@ -383,7 +528,7 @@ a.youtube:hover {
   }
 
   .poet-name {
-    text-align: left ;
+    text-align: left;
   }
 
   .card-grid {
@@ -399,7 +544,7 @@ a.youtube:hover {
   }
 
   .card-link i {
-    color: #f4a900;
+    color: #3aafa9;
     font-size: 1rem;
   }
 
@@ -422,6 +567,10 @@ a.youtube:hover {
 
   .footer-links {
     padding: 10px;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .contact-form button {
+    width: 100%;
   }
 }

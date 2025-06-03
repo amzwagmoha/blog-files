@@ -48,7 +48,7 @@
           const sortedPoets = Object.keys(groupedByPoet).sort((a, b) => a.localeCompare(b));
 
           sortedPoets.forEach(poet => {
-            html += `<h3 class="poet-name">${poet} <span class="poet-count">${groupedByPoet[poet].length}</span></h3>`;
+            html += `<h3 class="poet-name">${poet} <span class="poet-count">${groupedByPoet[poet].length} articles</span></h3>`;
             html += `<div class="card-grid">`;
             groupedByPoet[poet].forEach(entry => {
               html += `
