@@ -183,6 +183,10 @@ input:focus, textarea:focus {
   transform: scaleX(1);
 }
 
+.custom-navbar a.active {
+  color: #3aafa9;
+}
+
 .custom-navbar a.active::after {
   transform: scaleX(1);
   color: #3aafa9;
@@ -381,11 +385,13 @@ h3 i {
 
 .footer-links a, .footer-social a {
   color: #666;
-  text-decoration: none;
   transition: color .3s ease;
 }
 
-.footer-links a:hover, .footer-social a:hover {
+.footer-social a {
+  color: #3aafa9;
+}
+.footer-links a:hover {
   color: #3aafa9;
 }
 
