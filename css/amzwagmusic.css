@@ -58,7 +58,7 @@ body {
 .custom-navbar li::before {
   background-color: #fff;
   color: #3aafa9;
-  content: '\2022';
+  content: 'ⵣ';
   font-size: 1rem;
 }
 
@@ -399,18 +399,21 @@ h3 i {
   font-size: 1.2rem;
 }
 
-a.facebook:hover {
+a.facebook {
   color: #1877f2;
 }
 
-a.instagram:hover {
+a.instagram {
   color: #e4405f;
 }
 
-a.youtube:hover {
+a.youtube {
   color: #f00;
 }
 
+a.facebook:hover ,a.instagram:hover, a.youtube:hover {
+  color: #3aafa9;
+}
 /* Page de recherche */
 #custom-search {
   position: relative;
@@ -480,7 +483,7 @@ a.youtube:hover {
   width: 40%;
   border: none;
   border-radius: 4px;
-  background-color: #25d366;
+  background-color: #1ebe5d;
   color: white;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
@@ -489,7 +492,7 @@ a.youtube:hover {
 }
 
 .contact-form button:hover {
-  background-color: #1ebe5d;
+  background-color: #1AA853;
 }
 
 /* Mentions legales */
