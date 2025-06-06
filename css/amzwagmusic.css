@@ -30,6 +30,10 @@
 .tifinagh-text {
   font-family: 'tifinagh-text', Arial, Helvetica, sans-serif;
 }
+.arbic-text {
+  font-family: 'dubai', Arial, Helvetica, sans-serif;
+  direction: rtl;
+}
 
 body {
   margin: 0;
@@ -237,7 +241,6 @@ input:focus, textarea:focus {
   display: block;
   color: #333;
   font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
   line-height: 20px;
 }
 
@@ -458,6 +461,7 @@ a.facebook:hover ,a.instagram:hover, a.youtube:hover {
   margin: 0;
   margin-bottom: 5px;
   padding: 0;
+  color: #3aafa9;
 }
 
 #search-results p {
@@ -527,7 +531,11 @@ a.facebook:hover ,a.instagram:hover, a.youtube:hover {
 }
 
 @media (max-width: 768px) {
-  .hamburger-menu-container {
+  .header-widget {
+    text-align: left;
+  }
+
+.hamburger-menu-container {
     display: block;
   }
 
