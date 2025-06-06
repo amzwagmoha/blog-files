@@ -62,7 +62,6 @@ body {
 }
 
 .custom-navbar li::before {
-  background-color: #fff;
   color: #3aafa9;
   content: 'ⵣ';
   font-size: 1rem;
@@ -199,6 +198,11 @@ input:focus, textarea:focus {
 }
 
 /* side navbar */
+.side-navbar-title {
+  text-transform: uppercase;
+  color: #f4A900;
+  text-align: left;
+}
 
 .side-navbar {
   margin: 0;
