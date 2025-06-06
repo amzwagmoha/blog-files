@@ -30,9 +30,11 @@
 .tifinagh-text {
   font-family: 'tifinagh-text', Arial, Helvetica, sans-serif;
 }
-.arbic-text {
+
+.arabic-text {
   font-family: 'dubai', Arial, Helvetica, sans-serif;
   direction: rtl;
+  text-align: center;
 }
 
 body {
@@ -233,15 +235,42 @@ input:focus, textarea:focus {
 }
 
 /* Style des Pages */
-.welcome-message {
+.intro-section {
   display: none;
 }
 
-.homepage-view .welcome-message {
+.homepage-view .intro-section {
   display: block;
   color: #333;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.intro-container h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #3aafa9;
+}
+
+.intro-container p {
+  line-height: 1.6;
+  margin: 10px 0;
   font-size: 1rem;
-  line-height: 20px;
+}
+
+@media (max-width: 768px) {
+  .intro-container h2 {
+    font-size: 1.3rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-container p {
+    font-size: 0.95rem;
+    text-align: justify;
+  }
 }
 
 main ul {
@@ -543,6 +572,9 @@ a.facebook:hover ,a.instagram:hover, a.youtube:hover {
     display: none;
   }
 
+.arabic-text {
+  text-align: right;
+}
   .post-body img {
     display: block;
     margin: 1em auto;
