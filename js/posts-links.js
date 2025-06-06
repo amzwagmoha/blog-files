@@ -7,13 +7,13 @@
     const icon = container.dataset.icon || '';
     const totalCount = document.getElementById('count-' + label);
 
-    fetch('https://amzwagblog.blogspot.com/feeds/posts/default/-/' + label + '?alt=json')
+    fetch('/feeds/posts/default/-/' + label + '?alt=json') /*https://amzwagblog.blogspot.com*/
       .then(response => response.json())
       .then(data => {
         const entries = data.feed.entry || [];
 
         if (entries.length === 0) {
-          container.innerHTML = '<p>Aucun article trouvé.</p>';
+          container.innerHTML = '<p>No article found.</p>';
           return;
         }
 
@@ -31,7 +31,7 @@
             const title = entry.title.$t;
             const link = entry.link.find(l => l.rel === 'alternate').href;
 
-            let poet = 'Inconnu';
+            let poet = 'Unknown';
             if (entry.content && entry.content.$t) {
               const match = entry.content.$t.match(/<h4[^>]*>(.*?)<\/h4>/i);
               if (match && match[1]) {
@@ -81,7 +81,7 @@
         container.innerHTML = html;
       })
       .catch(() => {
-        container.innerHTML = '<p>Impossible de charger les articles.</p>';
+        container.innerHTML = '<p>Failed to load articles.</p>';
       });
   });
 });
