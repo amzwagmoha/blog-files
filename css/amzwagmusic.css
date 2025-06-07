@@ -61,12 +61,6 @@ body {
   text-align: center;
 }
 
-.custom-navbar li::before {
-  color: #3aafa9;
-  content: 'ⵣ';
-  font-size: 1rem;
-}
-
 em {
   font-style: italic;
   font-family: Lora, serif;
@@ -154,6 +148,12 @@ input:focus, textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.custom-navbar li::before {
+  color: #f4A900;
+  content: 'ⵣ';
+  font-size: 1rem;
 }
 
 .custom-navbar li:first-child::before {
