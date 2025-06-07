@@ -247,7 +247,6 @@ input:focus, textarea:focus {
   display: block;
   color: #333;
   margin: 20px auto;
-  max-width: 800px;
 }
 
 .intro-container h2 {
