@@ -71,10 +71,6 @@ em {
   display: none;
 }
 
-#Blog1 {
-  display: none;
-}
-
 /* general Elements  */
 .button {
   display: inline-flex;
@@ -244,14 +240,22 @@ input:focus, textarea:focus {
 }
 
 /* Style des Pages */
-.intro-section {
+.my-home-page {
   display: none;
 }
 
-.homepage-view .intro-section {
+.homepage-view .my-home-page{
   display: block;
   margin: 20px auto;
   color: #333;
+}
+
+.my-home-page h3 {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #9E9E9E;
+  font-family: arial;
+  font-weight: 400 ;
 }
 
 .intro-container h2 {
@@ -330,6 +334,7 @@ h3 i {
 .card-link {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   padding: 50px 10px;
   border: 1px solid #ddd;
@@ -349,7 +354,7 @@ h3 i {
 }
 
 .card-link i {
-  color: #3aafa9;
+  color: #666;
   font-size: 1.8rem;
 }
 
@@ -389,7 +394,7 @@ h3 i {
 }
 
 .card-meta span i {
-  color: #666;
+  color: #3aafa9;
   font-size: .8rem;
 }
 
@@ -643,9 +648,13 @@ a.facebook:hover, a.instagram:hover, a.youtube:hover {
     padding: 15px;
     gap: 5px;
   }
+  .card-title {
+    font-size: 1rem;
+    flex-direction: row;
+  }
 
   .card-link i {
-    color: #3aafa9;
+    color: #666;
     font-size: 1rem;
   }
 
