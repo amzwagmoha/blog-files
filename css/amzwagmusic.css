@@ -71,6 +71,10 @@ em {
   display: none;
 }
 
+#Blog1 {
+  display: none;
+}
+
 /* general Elements  */
 .button {
   display: inline-flex;
@@ -319,7 +323,6 @@ h3 i {
 .card-grid {
   display: grid;
   margin: auto;
-  ax-width: 1000px;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
@@ -373,20 +376,27 @@ h3 i {
   color: #3aafa9;
 }
 
-.card-meta , .card-meta span i{
+.card-meta {
   width: 100%;
   color: #666;
-  text-align: center;
   font-size: .8rem;
+  text-align: left;
+  border-top: 1px solid #e0e0e0;
 }
 
 .card-meta span {
   display: block;
 }
 
+.card-meta span i {
+  color: #666;
+  font-size: .8rem;
+}
+
 .article-poet-name {
   margin: 5px 0px;
   color: #666;
+  font-size: .8rem;
 }
 
 .labels .card-title {
@@ -643,9 +653,6 @@ a.facebook:hover, a.instagram:hover, a.youtube:hover {
     text-align: left;
   }
 
-  .card-meta {
-  border-top: 1px solid #e0e0e0;
-  }
   .labels .card-title {
     justify-content: space-between;
   }
