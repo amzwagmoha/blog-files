@@ -32,9 +32,9 @@
 }
 
 .arabic-text {
+  text-align: center;
   font-family: 'dubai', Arial, Helvetica, sans-serif;
   direction: rtl;
-  text-align: center;
 }
 
 body {
@@ -50,10 +50,11 @@ body {
 
 .centered-top-container {
   border-bottom: 1px solid #ddd;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #333;
 }
- .centered-top {
+
+.centered-top {
   width: 90%;
 }
 
@@ -151,7 +152,7 @@ input:focus, textarea:focus {
 }
 
 .custom-navbar li::before {
-  color: #f4A900;
+  color: #f4a900;
   content: 'ⵣ';
   font-size: 1rem;
 }
@@ -193,15 +194,15 @@ input:focus, textarea:focus {
 }
 
 .custom-navbar a.active::after {
-  transform: scaleX(1);
   color: #3aafa9;
+  transform: scaleX(1);
 }
 
 /* side navbar */
 .side-navbar-title {
-  text-transform: uppercase;
-  color: #f4A900;
+  color: #f4a900;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .side-navbar {
@@ -223,7 +224,7 @@ input:focus, textarea:focus {
 }
 
 .side-navbar li:hover {
-  border-bottom: 1px solid #f4A900;
+  border-bottom: 1px solid #f4a900;
 }
 
 .side-navbar a {
@@ -235,7 +236,7 @@ input:focus, textarea:focus {
 
 .side-navbar i {
   margin-right: 8px;
-  color: #f4A900;
+  color: #f4a900;
 }
 
 /* Style des Pages */
@@ -245,35 +246,23 @@ input:focus, textarea:focus {
 
 .homepage-view .intro-section {
   display: block;
-  color: #333;
   margin: 20px auto;
+  color: #333;
 }
 
 .intro-container h2 {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  margin-bottom: 15px;
   color: #3aafa9;
+  font-size: 1.6rem;
+  gap: 10px;
 }
 
 .intro-container p {
-  line-height: 1.6;
   margin: 10px 0;
   font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-  .intro-container h2 {
-    font-size: 1.3rem;
-    flex-direction: column;
-    text-align: center;
-  }
-  .intro-container p {
-    font-size: 0.95rem;
-    text-align: justify;
-  }
+  line-height: 1.6;
 }
 
 main ul {
@@ -367,8 +356,33 @@ h3 i {
   width: 100%;
   color: #333;
   text-align: center;
-  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
   gap: 10px;
+}
+
+.article-card {
+  align-items: flex-start;
+  flex-direction: column !important;
+}
+
+.article-card-title {
+  color: #2b7a78;
+}
+
+.card-meta {
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+  color: #666;
+  text-align: center;
+  font-size: .9rem;
+}
+
+.card-meta span {
+  display: block;
 }
 
 .labels .card-title {
@@ -426,6 +440,7 @@ h3 i {
 .footer-social a {
   color: #3aafa9;
 }
+
 .footer-links a:hover {
   color: #3aafa9;
 }
@@ -446,9 +461,10 @@ a.youtube {
   color: #f00;
 }
 
-a.facebook:hover ,a.instagram:hover, a.youtube:hover {
+a.facebook:hover, a.instagram:hover, a.youtube:hover {
   color: #3aafa9;
 }
+
 /* Page de recherche */
 #custom-search {
   position: relative;
@@ -528,7 +544,7 @@ a.facebook:hover ,a.instagram:hover, a.youtube:hover {
 }
 
 .contact-form button:hover {
-  background-color: #1AA853;
+  background-color: #1aa853;
 }
 
 /* Mentions legales */
@@ -567,7 +583,7 @@ a.facebook:hover ,a.instagram:hover, a.youtube:hover {
     text-align: left;
   }
 
-.hamburger-menu-container {
+  .hamburger-menu-container {
     display: block;
   }
 
@@ -575,9 +591,10 @@ a.facebook:hover ,a.instagram:hover, a.youtube:hover {
     display: none;
   }
 
-.arabic-text {
-  text-align: right;
-}
+  .arabic-text {
+    text-align: right;
+  }
+
   .post-body img {
     display: block;
     margin: 1em auto;
@@ -586,7 +603,18 @@ a.facebook:hover ,a.instagram:hover, a.youtube:hover {
     border-radius: 8px;
   }
 
-  .poet-name {
+  .intro-container h2 {
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .intro-container p {
+    text-align: justify;
+    font-size: .95rem;
+  }
+
+  .poet-name, .category {
     text-align: left;
   }
 

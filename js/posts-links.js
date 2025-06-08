@@ -7,7 +7,7 @@
     const icon = container.dataset.icon || '';
     const totalCount = document.getElementById('count-' + label);
 
-    fetch('/feeds/posts/default/-/' + label + '?alt=json') /*https://amzwag-music.blogspot.com*/
+    fetch('https://amzwag-music.blogspot.com/feeds/posts/default/-/' + label + '?alt=json') /*https://amzwag-music.blogspot.com*/
       .then(response => response.json())
       .then(data => {
         const entries = data.feed.entry || [];
