@@ -249,12 +249,23 @@ input:focus, textarea:focus {
   color: #333;
 }
 
+.homepage-view #Blog1 {
+  display: none;
+}
+
+h3 {
+  color: #9E9E9E;
+  font-family: 'lato', sans-serif;
+  font-size: 14px;
+}
+
 .my-home-page h3 {
   margin-top: 30px;
   font-size: 14px;
   color: #9E9E9E;
-  font-family: arial;
-  font-weight: 400 ;
+  font-family: 'arial', sans-serif;
+  text-transform: uppercase;
+
 }
 
 .intro-container h2 {
@@ -296,10 +307,11 @@ main ul li {
   user-select: none;
 }
 
-h3 .count {
+h3 .count, h3 i{
   background: none;
   color: #3aafa9;
 }
+
 
 .card-link:hover .count {
   background-color: #3aafa9;
@@ -319,9 +331,6 @@ h3 .count {
   font-size: .85em;
 }
 
-h3 i {
-  color: #3aafa9;
-}
 
 .card-grid {
   display: grid;
