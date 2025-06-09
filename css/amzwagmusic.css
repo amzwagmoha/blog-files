@@ -246,7 +246,6 @@ input:focus, textarea:focus {
 
 .homepage-view .my-home-page{
   display: block;
-  margin: 20px auto;
   color: #333;
 }
 
@@ -278,7 +277,7 @@ main ul {
 }
 
 main ul li {
-  color: #444;
+  color: #333;
   font-size: 1rem;
   line-height: 1.6;
 }

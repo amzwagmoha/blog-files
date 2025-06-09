@@ -3,7 +3,6 @@
 
   containers.forEach(container => {
     const label = container.dataset.label;
-    const icon = container.dataset.icon || '';
     const totalCount = document.getElementById('count-' + label);
 
     fetch('https://amzwag-music.blogspot.com/feeds/posts/default/-/' + label + '?alt=json')
@@ -40,7 +39,7 @@
 
           html += `
             <a class="card-link article-card" href="${link}" rel="noopener">
-              <div class="card-title"><i class="${icon}"></i>${title}</div>
+              <div class="card-title">${title}</div>
               <div class="card-meta">
                 <span class="poet-name article-poet-name"><i class="bi bi-person-fill"></i> ${poet}</span>
                 ${labels.length ? `<span class="category"><i class="bi bi-tag-fill"></i> ${labels.join(' > ')}</span>` : ''}
