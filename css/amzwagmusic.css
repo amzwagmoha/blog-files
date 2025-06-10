@@ -280,6 +280,13 @@ h3 {
   margin: 10px 0;
   font-size: 1rem;
   line-height: 1.6;
+  font-family: 'Hanuman', sans-serif;
+}
+
+.feedback {
+  font-size: 1rem;
+  font-family: 'Hanuman', sans-serif;
+  color: #666;
 }
 
 main ul {
@@ -573,36 +580,7 @@ a.facebook:hover, a.instagram:hover, a.youtube:hover {
   background-color: #1aa853;
 }
 
-/* Mentions legales */
-.legal-head ul {
-  line-height: 1.7;
-}
 
-.legal-head a:hover, .legal-section a:hover {
-  text-decoration: underline;
-}
-
-.legal-section {
-  margin-top: 20px;
-  padding: 10px;
-  background: #e6f2f1;
-  line-height: 1.7;
-}
-
-.legal-section h3 {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1rem;
-  gap: 10px;
-}
-
-.legal-section h3 i {
-  font-size: 1.8rem;
-}
 
 @media (max-width: 768px) {
   .header-widget {

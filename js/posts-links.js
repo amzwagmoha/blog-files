@@ -11,7 +11,7 @@
         const entries = data.feed.entry || [];
 
         if (entries.length === 0) {
-          container.innerHTML = '<p>No article found.</p>';
+          container.innerHTML = '<p class="feedback">⚠️ No article found.</p>';
           return;
         }
 
