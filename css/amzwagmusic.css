@@ -244,7 +244,7 @@ input:focus, textarea:focus {
   display: none;
 }
 
-.homepage-view .my-home-page{
+.homepage-view .my-home-page {
   display: block;
   color: #333;
 }
@@ -260,11 +260,10 @@ h3 {
 
 .my-home-page h3 {
   margin-top: 30px;
-  font-size: 14px;
   color: #f4a900;
-  font-family: 'arial', sans-serif;
   text-transform: uppercase;
-
+  font-size: 14px;
+  font-family: 'arial', sans-serif;
 }
 
 .intro-container h2 {
@@ -279,14 +278,14 @@ h3 {
 .intro-container p {
   margin: 10px 0;
   font-size: 1rem;
-  line-height: 1.6;
   font-family: 'Hanuman', sans-serif;
+  line-height: 1.6;
 }
 
 .feedback {
+  color: #666;
   font-size: 1rem;
   font-family: 'Hanuman', sans-serif;
-  color: #666;
 }
 
 main ul {
@@ -313,11 +312,10 @@ main ul li {
   user-select: none;
 }
 
-h3 .count, h3 i{
+h3 .count, h3 i {
   background: none;
   color: #3aafa9;
 }
-
 
 .card-link:hover .count {
   background-color: #3aafa9;
@@ -337,7 +335,6 @@ h3 .count, h3 i{
   font-size: .85em;
 }
 
-
 .card-grid {
   display: grid;
   margin: auto;
@@ -348,8 +345,8 @@ h3 .count, h3 i{
 .card-link {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   padding: 50px 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -397,10 +394,10 @@ h3 .count, h3 i{
 
 .card-meta {
   width: 100%;
-  color: #666;
-  font-size: .8rem;
-  text-align: left;
   border-top: 1px solid #e0e0e0;
+  color: #666;
+  text-align: left;
+  font-size: .8rem;
 }
 
 .card-meta span {
@@ -413,7 +410,7 @@ h3 .count, h3 i{
 }
 
 .article-poet-name {
-  margin: 5px 0px;
+  margin: 5px 0;
   color: #666;
   font-size: .8rem;
 }
@@ -580,8 +577,6 @@ a.facebook:hover, a.instagram:hover, a.youtube:hover {
   background-color: #1aa853;
 }
 
-
-
 @media (max-width: 768px) {
   .header-widget {
     text-align: left;
@@ -633,9 +628,10 @@ a.facebook:hover, a.instagram:hover, a.youtube:hover {
     padding: 15px;
     gap: 5px;
   }
+
   .card-title {
-    font-size: 1rem;
     flex-direction: row;
+    font-size: 1rem;
   }
 
   .card-link i {

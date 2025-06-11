@@ -25,7 +25,6 @@
           const title = entry.title.$t;
           const link = entry.link.find(l => l.rel === 'alternate').href;
 
-          // Extraire le poète
           let poet = 'unknown';
           if (entry.content && entry.content.$t) {
             const match = entry.content.$t.match(/<h4[^>]*>(.*?)<\/h4>/i);
