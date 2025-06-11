@@ -5,7 +5,7 @@
     const label = container.dataset.label;
     const totalCount = document.getElementById('count-' + label);
 
-    fetch('https://amzwag-music.blogspot.com/feeds/posts/default/-/' + label + '?alt=json')
+    fetch('https://timdyazin.blogspot.com/feeds/posts/default/-/' + label + '?alt=json')
       .then(response => response.json())
       .then(data => {
         const entries = data.feed.entry || [];
@@ -52,7 +52,7 @@
         container.innerHTML = html;
       })
       .catch(() => {
-        container.innerHTML = '<p>Failed to load articles.</p>';
+        container.innerHTML = '<p class="feedback">Failed to load articles.</p>';
       });
   });
 });
