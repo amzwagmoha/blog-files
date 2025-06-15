@@ -45,7 +45,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; 
 }
 
 .centered-top-container {
@@ -262,7 +262,7 @@ h3 {
   margin-top: 30px;
   color: #f4a900;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1rem;
   font-family: 'arial', sans-serif;
 }
 
@@ -277,9 +277,9 @@ h3 {
 
 .intro-container p {
   margin: 10px 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: 'Hanuman', sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .feedback {
@@ -288,14 +288,14 @@ h3 {
   font-family: 'Hanuman', sans-serif;
 }
 
-main ul {
+ul {
   padding-left: 0;
 }
 
-main ul li {
+ul li {
   color: #333;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 .count {
