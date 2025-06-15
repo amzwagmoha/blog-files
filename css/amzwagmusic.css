@@ -140,7 +140,7 @@ input:focus, textarea:focus {
 
 .custom-navbar a {
   padding: 10px;
-  color: #333;
+  color: #000;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -228,13 +228,12 @@ input:focus, textarea:focus {
 }
 
 h3 {
-  color: #f4a900;
+
   font-family: 'lato', sans-serif;
 }
 
 .my-home-page h3 {
   margin-top: 30px;
-  color: #f4a900;
   text-transform: uppercase;
   font-size: 1rem;
   font-family: 'arial', sans-serif;
@@ -292,8 +291,7 @@ ul {
   padding-left: 0;
 }
 
-ul li {
-  color: #333;
+ul li, p {
   font-size: 1.1rem;
   line-height: 1.7;
 }
@@ -303,7 +301,7 @@ ul li {
   padding: 4px 8px;
   min-width: 24px;
   border-radius: 12px;
-  background: #e0f0ef;
+  background: #FFDAC2;
   color: #d35400;
   text-align: center;
   font-weight: normal;
@@ -317,7 +315,7 @@ h3 .count, h3 i {
   color: #d35400;
 }
 
-.card-link:hover .count {
+.card-link:hover .count, .card-link:hover i {
   background-color: #d35400;
   color: #fff;
 }
@@ -331,7 +329,7 @@ h3 .count, h3 i {
 }
 
 .poet-count {
-  color: #777;
+  color: #666;
   font-size: .85em;
 }
 
@@ -352,14 +350,14 @@ h3 .count, h3 i {
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 2px 6px rgb(0 0 0 / .05);
-  color: #333;
+  color: #000;
   text-transform: capitalize;
   transition: background .3s, transform .2s;
   gap: 20px;
 }
 
 .card-link:hover {
-  background: #FFC8A3;
+  background: #FFDAC2;
   box-shadow: 0 4px 12px rgb(0 0 0 / .1);
   transform: translateY(-5px);
 }
@@ -395,7 +393,7 @@ h3 .count, h3 i {
 .card-meta {
   width: 100%;
   border-top: 1px solid #e0e0e0;
-  color: #666;
+  color: #333;
   text-align: left;
   font-size: 1rem;
 }
@@ -411,7 +409,7 @@ h3 .count, h3 i {
 
 .article-poet-name {
   margin: 5px 0;
-  color: #666;
+  color: #333;
   font-size: 1rem;
 }
 
@@ -531,7 +529,7 @@ a.facebook:hover, a.instagram:hover, a.youtube:hover {
 }
 
 #search-results div:hover {
-  background: #FFC8A3;
+  background: #FFDAC2;
   transform: translateY(-5px);
 }
 
