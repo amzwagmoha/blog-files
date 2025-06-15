@@ -228,11 +228,12 @@ input:focus, textarea:focus {
 }
 
 h3 {
-
+  color: #d35400;
   font-family: 'lato', sans-serif;
 }
 
 .my-home-page h3 {
+  color: #d35400;
   margin-top: 30px;
   text-transform: uppercase;
   font-size: 1rem;
@@ -319,6 +320,9 @@ h3 .count, h3 i {
   background-color: #d35400;
   color: #fff;
 }
+.card-link:hover i {
+  color: #fff;
+}
 
 .poet-name {
   margin: 30px 0 10px 0;
@@ -395,7 +399,7 @@ h3 .count, h3 i {
   border-top: 1px solid #e0e0e0;
   color: #333;
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .card-meta span {
@@ -410,7 +414,7 @@ h3 .count, h3 i {
 .article-poet-name {
   margin: 5px 0;
   color: #333;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .labels .card-title {
