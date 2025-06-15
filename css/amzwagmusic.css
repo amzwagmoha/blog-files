@@ -41,7 +41,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
-  color: #000;
+  color: #2c3e50;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.7;
 }
@@ -138,7 +138,7 @@ input:focus, textarea:focus {
 
 .custom-navbar a {
   padding: 10px;
-  color: #000;
+  color: #2c3e50;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -200,7 +200,7 @@ input:focus, textarea:focus {
 .side-navbar a {
   display: block;
   padding: 15px 0;
-  color: #000;
+  color: #2c3e50;
   transition-duration: .3s;
 }
 .side-navbar a:hover {
@@ -313,7 +313,7 @@ h3 .count, h3 i {
   color: #d35400;
 }
 
-.card-link:hover .count, .card-link:hover i {
+.card-link:hover .count {
   background-color: #d35400;
   color: #fff;
 }
