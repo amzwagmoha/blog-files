@@ -314,9 +314,6 @@ h3 .count, h3 i {
   background-color: #d35400;
   color: #fff;
 }
-.card-link:hover i {
-  color: #fff;
-}
 
 .poet-name {
   margin: 30px 0 10px 0;
