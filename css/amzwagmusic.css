@@ -376,8 +376,8 @@ h3 .count, h3 i {
   text-transform: uppercase;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
-  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-family: 'Arial', sans-serif;
   gap: 10px;
 }
 
