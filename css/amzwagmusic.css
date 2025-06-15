@@ -45,7 +45,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .centered-top-container {
@@ -72,23 +72,7 @@ em {
 }
 
 /* general Elements  */
-.button {
-  display: inline-flex;
-  align-items: center;
-  margin-top: 10px;
-  padding: 10px 18px;
-  border-radius: 5px;
-  background-color: #3aafa9;
-  color: #fff;
-  text-decoration: none;
-  font-size: .95rem;
-  transition: background-color .3s;
-  gap: 6px;
-}
 
-.button:hover {
-  background-color: #2b7a78;
-}
 
 ul {
   list-style: none;
@@ -96,7 +80,7 @@ ul {
 
 a {
   position: relative;
-  color: #3aafa9;
+  color: #d35400;
   text-decoration: none;
 }
 
@@ -111,7 +95,7 @@ input, textarea {
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   background: #fff;
-  box-shadow: 0 0 5px rgba(58, 175, 169, .3);
+  box-shadow: 0 0 5px rgba(211, 84, 0, .3);
   color: #333;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
@@ -119,8 +103,8 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  border: 1px solid #3aafa9;
-  box-shadow: 0 0 8px #3aafa9;
+  border: 1px solid #d35400;
+  box-shadow: 0 0 8px #d35400;
 }
 
 .search input {
@@ -152,7 +136,7 @@ input:focus, textarea:focus {
 }
 
 .custom-navbar li::before {
-  color: #f4a900;
+  color: #d35400;
   content: 'ⵣ';
   font-size: 1rem;
 }
@@ -169,7 +153,7 @@ input:focus, textarea:focus {
 }
 
 .custom-navbar a:hover {
-  color: #3aafa9;
+  color: #d35400;
 }
 
 .custom-navbar a::after {
@@ -178,7 +162,7 @@ input:focus, textarea:focus {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #3aafa9;
+  background-color: #d35400;
   content: '';
   transition: transform .3s ease;
   transform: scaleX(0);
@@ -190,11 +174,11 @@ input:focus, textarea:focus {
 }
 
 .custom-navbar a.active {
-  color: #3aafa9;
+  color: #d35400;
 }
 
 .custom-navbar a.active::after {
-  color: #3aafa9;
+  color: #d35400;
   transform: scaleX(1);
 }
 
@@ -215,7 +199,7 @@ input:focus, textarea:focus {
 .side-navbar li {
   margin: 0 !important;
   padding: 0;
-  border-bottom: 1px solid #3aafa9;
+  border-bottom: 1px solid #d35400;
   transition-duration: .3s;
 }
 
@@ -236,7 +220,7 @@ input:focus, textarea:focus {
 
 .side-navbar i {
   margin-right: 8px;
-  color: #f4a900;
+  color: #d35400;
 }
 
 /* Style des Pages */
@@ -246,7 +230,6 @@ input:focus, textarea:focus {
 
 .homepage-view .my-home-page {
   display: block;
-  color: #333;
 }
 
 .homepage-view #Blog1 {
@@ -266,20 +249,46 @@ h3 {
   font-family: 'arial', sans-serif;
 }
 
-.intro-container h2 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  color: #3aafa9;
-  font-size: 1.6rem;
-  gap: 10px;
+.welcome-banner {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.intro-container p {
-  margin: 10px 0;
+.welcome-banner h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.welcome-banner h1 span {
+  color: #d35400;
+}
+
+.welcome-banner p {
+  margin: 1rem auto 0 auto;
+  max-width: 700px;
+  color: #444;
+  font-size: 1.2rem;
+}
+
+.welcome-banner p:nth-of-type(2) {
   font-size: 1.1rem;
-  font-family: 'Hanuman', sans-serif;
-  line-height: 1.7;
+  color: #555;
+  margin-top: 0;
+}
+
+.welcome-banner p:nth-of-type(3) {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #666;
+}
+
+.welcome-banner p:nth-of-type(4) {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #888;
 }
 
 .feedback {
@@ -304,7 +313,7 @@ ul li {
   min-width: 24px;
   border-radius: 12px;
   background: #e0f0ef;
-  color: #3aafa9;
+  color: #d35400;
   text-align: center;
   font-weight: normal;
   font-size: .85em;
@@ -314,17 +323,17 @@ ul li {
 
 h3 .count, h3 i {
   background: none;
-  color: #3aafa9;
+  color: #d35400;
 }
 
 .card-link:hover .count {
-  background-color: #3aafa9;
+  background-color: #d35400;
   color: #fff;
 }
 
 .poet-name {
   margin: 30px 0 10px 0;
-  color: #3aafa9;
+  color: #d35400;
   text-transform: capitalize;
   font-weight: normal;
   font-size: 1rem;
@@ -373,7 +382,7 @@ h3 .count, h3 i {
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: #3aafa9;
+  color: #d35400;
   text-align: center;
   text-transform: uppercase;
   font-weight: 400;
@@ -389,7 +398,7 @@ h3 .count, h3 i {
 }
 
 .article-card-title {
-  color: #3aafa9;
+  color: #d35400;
 }
 
 .card-meta {
@@ -405,7 +414,7 @@ h3 .count, h3 i {
 }
 
 .card-meta span i {
-  color: #3aafa9;
+  color: #d35400;
   font-size: .8rem;
 }
 
@@ -451,7 +460,7 @@ h3 .count, h3 i {
 }
 
 .footer-brand span {
-  color: #3aafa9;
+  color: #d35400;
 }
 
 .footer-links, .footer-social {
@@ -468,11 +477,11 @@ h3 .count, h3 i {
 }
 
 .footer-social a {
-  color: #3aafa9;
+  color: #d35400;
 }
 
 .footer-links a:hover {
-  color: #3aafa9;
+  color: #d35400;
 }
 
 .footer-social i {
@@ -492,7 +501,7 @@ a.youtube {
 }
 
 a.facebook:hover, a.instagram:hover, a.youtube:hover {
-  color: #3aafa9;
+  color: #d35400;
 }
 
 /* Page de recherche */
@@ -517,7 +526,7 @@ a.facebook:hover, a.instagram:hover, a.youtube:hover {
   padding: 6px 10px;
   border: none;
   background-color: transparent;
-  color: #3aafa9;
+  color: #d35400;
   font-size: 14px;
   cursor: pointer;
   transform: translateY(-50%);
@@ -539,7 +548,7 @@ a.facebook:hover, a.instagram:hover, a.youtube:hover {
   margin: 0;
   margin-bottom: 5px;
   padding: 0;
-  color: #3aafa9;
+  color: #d35400;
 }
 
 #search-results p {
@@ -600,17 +609,6 @@ a.facebook:hover, a.instagram:hover, a.youtube:hover {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-  }
-
-  .intro-container h2 {
-    flex-direction: column;
-    text-align: center;
-    font-size: 1.3rem;
-  }
-
-  .intro-container p {
-    text-align: justify;
-    font-size: .95rem;
   }
 
   .poet-name, .category {
