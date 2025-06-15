@@ -69,8 +69,6 @@ em {
 }
 
 /* general Elements  */
-
-
 ul {
   list-style: none;
 }
@@ -177,8 +175,8 @@ input:focus, textarea:focus {
 
 /* side navbar */
 .side-navbar-title {
-  color: #f4a900;
-  text-align: left;
+  color: #d35400;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -186,13 +184,12 @@ input:focus, textarea:focus {
   margin: 0;
   margin-top: 15px;
   padding: 0;
-  background-color: #d35400;
 }
 
 .side-navbar li {
   margin: 0 !important;
   padding: 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #d35400;
   transition-duration: .3s;
 }
 
@@ -203,15 +200,15 @@ input:focus, textarea:focus {
 .side-navbar a {
   display: block;
   padding: 15px 0;
-  color: #fff;
+  color: #000;
   transition-duration: .3s;
 }
 .side-navbar a:hover {
-  color: #f4a900;
+  color: #d35400;
 }
 .side-navbar i {
   margin-right: 8px;
-  color: #fff;
+  color: #d35400;
 }
 
 /* Style des Pages */
