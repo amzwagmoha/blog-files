@@ -5,7 +5,7 @@
     const label = container.dataset.label;
     const totalCount = document.getElementById('count-' + label);
 
-    fetch('https://timdyazin.blogspot.com/feeds/posts/default/-/' + label + '?alt=json')
+    fetch('/feeds/posts/default/-/' + label + '?alt=json')
       .then(response => response.json())
       .then(data => {
         const entries = data.feed.entry || [];

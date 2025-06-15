@@ -41,17 +41,14 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
-  color: #333;
+  color: #000;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .centered-top-container {
   border-bottom: 1px solid #ddd;
   background-color: #fff;
-  color: #333;
 }
 
 .centered-top {
@@ -85,7 +82,7 @@ a {
 }
 
 a:hover {
-  color: #2b7a78;
+  color: #B24700;
 }
 
 input, textarea {
@@ -95,10 +92,8 @@ input, textarea {
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   background: #fff;
-  box-shadow: 0 0 5px rgba(211, 84, 0, .3);
-  color: #333;
+  box-shadow: 0 0 5px rgba(240, 96, 0, 0.3);
   font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
   transition-duration: .3s ease;
 }
 
@@ -112,13 +107,11 @@ input:focus, textarea:focus {
   border-radius: 0;
   background: transparent;
   box-shadow: none;
-  color: #333;
 }
 
 /* horizontal navbar */
 .custom-navbar {
   padding: 10px 0;
-  font: normal 400 14px Montserrat, sans-serif;
 }
 
 .custom-navbar ul {
@@ -193,22 +186,18 @@ input:focus, textarea:focus {
   margin: 0;
   margin-top: 15px;
   padding: 0;
-  background-color: #2b7a78;
+  background-color: #d35400;
 }
 
 .side-navbar li {
   margin: 0 !important;
   padding: 0;
-  border-bottom: 1px solid #d35400;
+  border-bottom: 1px solid #fff;
   transition-duration: .3s;
 }
 
 .side-navbar li:last-child {
   border-bottom: none;
-}
-
-.side-navbar li:hover {
-  border-bottom: 1px solid #f4a900;
 }
 
 .side-navbar a {
@@ -217,10 +206,12 @@ input:focus, textarea:focus {
   color: #fff;
   transition-duration: .3s;
 }
-
+.side-navbar a:hover {
+  color: #f4a900;
+}
 .side-navbar i {
   margin-right: 8px;
-  color: #d35400;
+  color: #fff;
 }
 
 /* Style des Pages */
@@ -368,7 +359,7 @@ h3 .count, h3 i {
 }
 
 .card-link:hover {
-  background: #e6f2f1;
+  background: #FFC8A3;
   box-shadow: 0 4px 12px rgb(0 0 0 / .1);
   transform: translateY(-5px);
 }
@@ -406,7 +397,7 @@ h3 .count, h3 i {
   border-top: 1px solid #e0e0e0;
   color: #666;
   text-align: left;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 .card-meta span {
@@ -415,13 +406,13 @@ h3 .count, h3 i {
 
 .card-meta span i {
   color: #d35400;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 .article-poet-name {
   margin: 5px 0;
   color: #666;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 .labels .card-title {
@@ -440,7 +431,7 @@ h3 .count, h3 i {
   border-top: 1px solid #ddd;
   background-color: #f9f9f9;
   color: #555;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 .footer-wrapper {
@@ -540,7 +531,7 @@ a.facebook:hover, a.instagram:hover, a.youtube:hover {
 }
 
 #search-results div:hover {
-  background: #e6f2f1;
+  background: #FFC8A3;
   transform: translateY(-5px);
 }
 
